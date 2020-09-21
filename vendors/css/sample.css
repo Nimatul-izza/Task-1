@@ -3,7 +3,9 @@ html {
   height: 100%;
 }
 body {
+  margin: 0 auto;
   text-align: center;
+  height: 100%;
 }
 .main-header {
   padding-bottom: 15%;
@@ -11,6 +13,12 @@ body {
   background-size: cover;
   background-image: url("../images/header.jpg");
   background-attachment: fixed;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
 }
 /* ここから */
 header {
@@ -55,7 +63,7 @@ header ul:after {
 .function {
   background-color: silver;
   padding-top: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 250px;
 }
 .function-images {
   text-align: center;
@@ -72,9 +80,9 @@ header ul:after {
 footer {
   width: 100%;
   height: 100px;
-  position: fixed;
+  position:absolute;
   bottom: 0;
-  background-color: slategray;
+  background-color: #324851;
   display: table;
 }
 footer p {
@@ -83,4 +91,8 @@ footer p {
   text-align: center;
   vertical-align: bottom;
   display: block;
+}
+.wrapper {
+  margin-top: 10px;
+  padding-bottom: 100px;
 }
