@@ -1,0 +1,23 @@
+.contact td{
+  height: 7rem;
+  width: 150px;
+}
+.text{
+  width: 480px;
+}
+.textfill{
+  text-align: left;
+
+}
+.submit{
+  color: white;
+  background-color: skyblue;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px
+  left: 50%
+  }
+.submit:hover{
+    background-color: lightblue;
+  }
