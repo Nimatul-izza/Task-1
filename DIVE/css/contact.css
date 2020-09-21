@@ -1,23 +1,37 @@
+.contact tr{
+  padding: 10px;
+  width: 100%;
+  position: relative;
+}
 .contact td{
   height: 7rem;
   width: 150px;
 }
 .text{
   width: 480px;
+  position: relative;
+}
+.radio{
+  text-align: left;
 }
 .textfill{
-  text-align: left;
-
+  text-align: right;
+  padding-right: 20px;
 }
-.submit{
-  color: white;
+.wrapper{
+  position: relative;
+  width: 100%;
+}
+button {
+  text-align: center;
+  padding: 10px;
   background-color: skyblue;
+  color: white;
   border: none;
-  font-weight: bold;
+  font-size: 20px;
+  font weight: bold;
   cursor: pointer;
-  padding: 10px
-  left: 50%
-  }
-.submit:hover{
+}
+button:hover{
     background-color: lightblue;
-  }
+}

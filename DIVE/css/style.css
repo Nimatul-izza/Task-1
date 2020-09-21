@@ -1,17 +1,17 @@
 html {
   font-size : 62.5% ;
-  height: 100%
+  height: 100%;
 }
 body {
-  width : 980px ;
-  margin : 0 ​ ​auto ;
-  height: 100%
+  width: 100%;
+
 }
 .container {
-  width: 980px;
+  width: 100%;
   margin: 0 auto;
-  min-height: 100%;
-  position: relative;
+  height: 100px;
+  position: static;
+  text-align: center;
 }
 ul {
   margin: 0;
@@ -49,9 +49,11 @@ ul.top_menu {
 .image_area {
   width: 100%;
 }
-.wrapper{
+.wrapper {
+  min-width: 100%;
   margin-top: 10px;
   padding-bottom: 100px;
+  position: relative;
 }
 .side_menu {
   width: 300px;
@@ -71,6 +73,7 @@ ul.top_menu {
   text-decoration: none;
   display: block;
   padding: 2rem;
+  text-align: left;
 }
 .side_menu .point{
   background-color: #FCECEC;
@@ -92,6 +95,7 @@ ul.top_menu {
   margin-left:20px;
   float: left;
   font-size: 1.5rem;
+  position: relative;
 }
 .news{
   height: 200px;
@@ -113,7 +117,7 @@ ul.top_menu {
 .footer{
   width: 100%;
   height: 100px;
-  position: absolute;
+  position: static;
   bottom: 0;
   background-color: #4D4D4D;
   display: table;
