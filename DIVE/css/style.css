@@ -4,13 +4,13 @@ html {
 }
 body {
   width: 100%;
-
 }
 .container {
-  width: 100%;
+  width: 980px;
   margin: 0 auto;
-  height: 100px;
-  position: static;
+  height: 100%;
+
+  position: relative;
   text-align: center;
 }
 ul {
@@ -52,7 +52,7 @@ ul.top_menu {
 .wrapper {
   min-width: 100%;
   margin-top: 10px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   position: relative;
 }
 .side_menu {
