@@ -1,0 +1,39 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+  # box名
+  config.vm.box = "ubuntu/xenial64"
+  # hostの3000ポートへのアクセスがguestの3000ポートへ転送されます。
+  config.vm.network :"forwarded_port", guest: 3000, host: 3000
+  # 共有フォルダの設定
+  config.vm.synced_folder "~/workspace", "/home/vagrant/workspace", :create => true, mount_options: ['dmode=777','fmode=755']
+  # 仮想マシーンを起動後に実行されるプロビジョニングの内容を、インラインを使ってシェルスクリプトに定義
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    # apt-getを更新
+    sudo apt-get -y update
+    sudo apt-get -y upgrade
+    # 周辺ライブラリをインストール
+    sudo apt-get install git curl g++ make vim nodejs libreadline-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev -y
+    # 初期にインストールされているrubyを削除
+    sudo apt-get remove ruby -y
+    # rbenvをインストール
+    git clone git://github.com/rbenv/rbenv.git /home/vagrant/.rbenv
+    # rbenvの初期設定
+    echo 'export PATH="/home/vagrant/.rbenv/bin:$PATH"' >> /home/vagrant/.profile
+    echo 'eval "$(rbenv init -)"' >> /home/vagrant/.profile
+    . /home/vagrant/.profile
+    # ruby-buildをインストール
+    mkdir -p /home/vagrant/.rbenv/plugins
+    git clone git://github.com/rbenv/ruby-build.git /home/vagrant/.rbenv/plugins/ruby-build
+    # ローカルと同じバージョンのrubyを指定し、インストール
+    rbenv install 2.6.5
+    # インストールしたrubyをグローバルに適用
+    rbenv global 2.6.5
+    rbenv rehash
+    sudo apt-get install ruby-railties -y
+    # bundleをインストール
+    gem install bundler --no-document
+    # postgresqlをインストール
+    sudo apt-get install postgresql postgresql-contrib python-psycopg2 libpq-dev -y
+  SHELL
+end

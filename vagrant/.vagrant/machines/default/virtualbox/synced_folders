@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/workspace":{"create":true,"mount_options":["dmode=777","fmode=755","uid=1000","gid=1000"],"guestpath":"/home/vagrant/workspace","hostpath":"C:/Users/izzan/workspace","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/izzan/workspace/vagrant","disabled":false,"__vagrantfile":true}}}

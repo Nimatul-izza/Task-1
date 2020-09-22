@@ -1,0 +1,15 @@
+/* 背景色の設定 */
+body {
+  background-color: #00aeef;
+}
+h2 {
+  color: #f9f9f9;
+  font-size: 16px;
+}
+}
+#parag1{
+  font-size: large;
+}
+#parag2{
+  background-color: white;
+}
